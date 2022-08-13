@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="naK-HW-2o9">
+                                <rect key="frame" x="83" y="422.5" width="248" height="51.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-uv-rZL">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5W-xl-zox">
+                                                <rect key="frame" x="0.0" y="0.0" width="248" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRd-l1-qzD">
+                                        <rect key="frame" x="0.0" y="20.5" width="248" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="incrementButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXT-GJ-j0W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="B2L-uv-rZL" secondAttribute="trailing" id="6xx-qE-36E"/>
+                                    <constraint firstItem="oRd-l1-qzD" firstAttribute="top" secondItem="B2L-uv-rZL" secondAttribute="bottom" id="Kev-fb-ZLN"/>
+                                    <constraint firstAttribute="trailing" secondItem="oRd-l1-qzD" secondAttribute="trailing" id="WjA-mL-KOc"/>
+                                    <constraint firstItem="oRd-l1-qzD" firstAttribute="leading" secondItem="naK-HW-2o9" secondAttribute="leading" id="cs7-Me-QbQ"/>
+                                    <constraint firstItem="B2L-uv-rZL" firstAttribute="leading" secondItem="naK-HW-2o9" secondAttribute="leading" id="gQu-oX-WUG"/>
+                                    <constraint firstItem="B2L-uv-rZL" firstAttribute="top" secondItem="naK-HW-2o9" secondAttribute="top" id="n6x-dF-v2o"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="naK-HW-2o9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4BP-zY-FWu"/>
+                            <constraint firstItem="naK-HW-2o9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="7bA-Ew-wgg"/>
+                            <constraint firstItem="naK-HW-2o9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zbd-gH-9Np"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="L5W-xl-zox" id="igA-mH-Cj7"/>
+                        <outlet property="incrementButton" destination="oRd-l1-qzD" id="pAo-Rl-pLu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
